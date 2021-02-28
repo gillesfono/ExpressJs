@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Application</title>
+</head>
+<body>
+    <form name="forms" action="/api/p2"  onsubmit="p2()" method="get">
+        <label for="date_start">Date de début</label>
+        <input type="date" id="date_start" name="date_start" required>
+        <label for="date_end">Date de fin</label>
+        <input type="date" id="date_end" name="date_end" >
+        <button type="submit" >Envoyer</button>
+    </form>
+    
+<script>
+    function p2(){
+        var a = document.forms.date_start.value.getDate();
+        var b = document.forms.date_end.value.getDate();
+        var rs = (a-1) + (31-b);
+        //document.forms.res.value = rs;
+        alert(rs);
+        return rs;
+    }
+</script>
+</body>
+</html>

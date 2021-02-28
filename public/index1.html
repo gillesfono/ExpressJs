@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Application</title>
+</head>
+<body>
+    <form name="forms" action="/api/p1" onsubmit="p1()" method="get">
+        <label for="str">Str</label>
+        <input type="text" id="str" name="str" required>
+        <label for="nbr">nbr</label>
+        <input type="number" id="nbr" name="nbr" required>
+        <button type="submit" >Envoyer</button>
+    </form>
+    
+<script>
+    function p1(){
+        var a = document.forms.str.value.length;
+        var b = document.forms.nbr.value;
+        var rs = a/b;
+        //document.forms.res.value = rs;
+        alert(rs);
+        return rs;
+    }
+</script>
+</body>
+</html>
